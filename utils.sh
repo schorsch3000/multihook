@@ -19,7 +19,7 @@ function inArray # hasKey:  inArray "myKey" "${!myArray[@]}"
 {                #hasValue: inArray "myVal" "${myArray[@]}"
   local e
   for e in "${@:2}"; do
-    [[ "$e" == "$1" ]] && return 0;
+    [[ "$e" == "$1" ]] && return 0
   done
   return 1
 }

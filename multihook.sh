@@ -47,7 +47,8 @@ LN=0
 
     RETVAL=$?
     if [ $RETVAL -ne 0 ] ; then
-        fatal ${FC_RED}Command ${S_BOLD}"'${val}'"${R_BOLD} failed with exit code: ${S_BOLD}${RETVAL}${R_BOLD}${FC_DEFAULT}
+        echo -e ${FC_RED}Command ${S_BOLD}"'${val}'"${R_BOLD} failed with exit code: ${S_BOLD}${RETVAL}${R_BOLD}${FC_DEFAULT}
+        exit ${RETVAL}
     fi
     echo -e ${FC_YELLOW}
     hr -
